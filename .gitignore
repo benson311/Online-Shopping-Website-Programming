@@ -1,0 +1,17 @@
+# 相依套件
+node_modules/
+
+# 資料庫（含會員資料，且可由 seed-products.js 重建）
+database.db
+
+# 個人備份與壓縮檔
+備份/
+網頁設計.zip
+
+# 系統與編輯器檔案
+.DS_Store
+.vscode/
+*.log
+# 其他
+.Rhistory
+.RData

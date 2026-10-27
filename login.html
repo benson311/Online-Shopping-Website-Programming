@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入 - 阿奇滑板店</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-container input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-container button:hover {
+            background-color: #555;
+        }
+
+        .login-container a {
+            display: block;
+            margin-top: 15px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>會員登入</h2>
+        <div id="logged-in-info" style="display:none;margin-bottom:15px;color:#27ae60;"></div>
+        <input type="text" placeholder="帳號" id="username">
+        <input type="password" placeholder="密碼" id="password">
+        <button onclick="login()">登入</button>
+        <button id="logout-btn" style="display:none;" onclick="logout()">登出</button>
+        <a href="register.html">註冊</a>
+        <a href="index.html">首頁</a>
+    </div>
+
+    <script>
+        function login() {
+            // 獲取用戶輸入的資料
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // 簡單驗證
+            if (username === '' || password === '') {
+                alert("所有欄位皆需填寫");
+                return;
+            }
+
+            // 發送登入請求
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username: username, password: password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    // 將登入狀態存入 localStorage，供全站購物車功能使用
+                    localStorage.setItem('currentUser', JSON.stringify({
+                        userId: data.userId,
+                        username: data.username
+                    }));
+                    alert('登入成功');
+                    window.location.href = 'index.html';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('登入失敗');
+            });
+        }
+
+        // 若已經登入，顯示目前帳號與登出按鈕
+        function checkLoginState() {
+            var user = null;
+            try {
+                user = JSON.parse(localStorage.getItem('currentUser'));
+            } catch (e) {
+                user = null;
+            }
+            if (user) {
+                document.getElementById('logged-in-info').innerText = '目前已登入：' + user.username;
+                document.getElementById('logged-in-info').style.display = 'block';
+                document.getElementById('logout-btn').style.display = 'block';
+                document.querySelector('.login-container button').style.display = 'none';
+                document.getElementById('username').style.display = 'none';
+                document.getElementById('password').style.display = 'none';
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('currentUser');
+            alert('已登出');
+            window.location.reload();
+        }
+
+        checkLoginState();
+        </script>
+</body>
+</html>
+

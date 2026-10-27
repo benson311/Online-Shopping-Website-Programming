@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿奇滑板店</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header-right {
+            display: flex;
+            gap: 15px;
+        }
+        .header-right a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .categories {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .categories button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .categories button:hover {
+            background-color: #555;
+        }
+        .product-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: calc(33.333% - 40px); /* 每行顯示三個產品 */
+            box-sizing: border-box;
+        }
+        .product img {
+            max-width: 150%;
+            height: auto;
+            max-height: 250px; /* 固定高度，保持比例 */
+            object-fit: contain; /* 适应容器 */
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* 新增提示區域樣式 */
+        .cart-notification {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html">
+                <img src="images/logo.png" alt="阿奇滑板店標誌" class="logo">
+            </a>
+            <h1>阿奇滑板店</h1>
+        </div>
+        <nav class="header-right">
+            <a href="index.html">首頁</a>
+            <a href="cart.html">購物車</a>
+            <a href="login.html">註冊/登入</a>
+        </nav>
+    </header>
+    <main>
+        <div class="categories">
+            <button onclick="window.location.href='reconmand.html'">推薦產品</button>
+            <button onclick="window.location.href='product.html'">所有產品</button>
+            <button onclick="window.location.href='deck.html'">板身</button>
+            <button onclick="window.location.href='truck.html'">輪架</button>
+            <button onclick="window.location.href='wheel.html'">輪子</button>
+            <button onclick="window.location.href='griptape.html'">砂紙</button>
+            <button onclick="window.location.href='bearing.html'">培林</button>
+            <button onclick="window.location.href='hardware.html'">螺絲</button>
+            <button onclick="window.location.href='clothes.html'">服飾</button>
+            <button onclick="window.location.href='other.html'">其他</button>
+        </div>
+        <div class="product-list" id="product-list" data-category="clothes"></div>
+    </main>
+    <footer>
+        <div class="contact-info">
+            <p>地址: 桃園市蘆竹區蘆竹路15號</p>
+            <p>聯絡電話: 03-3245688</p>
+            <p>Email: <a href="mailto:qooskateboard@gmail.com">qooskateboard@gmail.com</a></p>
+            &copy; 2023 阿奇滑板店. 版權所有.
+        </div>
+    </footer>
+    <div class="cart-notification" id="cart-notification">商品已加入購物車</div>
+    <script src="js/shared.js"></script>
+    </script>
+    <script src="js/products.js"></script>
+</body>
+</html>

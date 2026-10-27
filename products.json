@@ -1,0 +1,275 @@
+[
+  {
+    "name": "APRIL BLUE LOGO 8.5",
+    "price": 2200,
+    "image": "images/April_logo.jpg",
+    "category": "deck",
+    "featured": 0
+  },
+  {
+    "name": "APRIL ISH ROCKETS 8.25",
+    "price": 2200,
+    "image": "images/April_ish_rocket.jpg",
+    "category": "deck",
+    "featured": 1
+  },
+  {
+    "name": "APRIL YUTO ICE 8.0",
+    "price": 2200,
+    "image": "images/APRIL_YUTO_ICE.jpg",
+    "category": "deck",
+    "featured": 1
+  },
+  {
+    "name": "APRIL SHANE O'NEILL MACHINE 8.125",
+    "price": 2200,
+    "image": "images/APRIL_SHANE_ONEILL_MACHINE.jpg",
+    "category": "deck",
+    "featured": 0
+  },
+  {
+    "name": "SANTA CRUZ CLASSIC DOT 8.25",
+    "price": 2100,
+    "image": "images/SANTA_CRUZ_CLASSIC_DOT.jpg",
+    "category": "deck",
+    "featured": 1
+  },
+  {
+    "name": "SANTA CRUZ SCREAMING HAND 8.125",
+    "price": 2100,
+    "image": "images/SANTA_CRUZ_SCREAMING_HAND.jpg",
+    "category": "deck",
+    "featured": 0
+  },
+  {
+    "name": "FUCKING AWESOME SAGE WAYS OF KNOWING 8.0",
+    "price": 2700,
+    "image": "images/FUCKING_AWESOME_SAGE_WAYS_OF_KNOWING.jpg",
+    "category": "deck",
+    "featured": 1
+  },
+  {
+    "name": "PALACE PLB475 BRADY 8.0",
+    "price": 2500,
+    "image": "images/PALACE_PLB475_BRADY.jpg",
+    "category": "deck",
+    "featured": 0
+  },
+  {
+    "name": "INDEPENDENT STAGE 11 HOLLOW IKP BAR POLISHED SILVER STANDARD TRUCKS 139mm",
+    "price": 2400,
+    "image": "images/INDEPENDENT_STAGE_11_HOLLOW_IKP_BAR_POLISHED_SILVER_STANDARD_TRUCKS_139mm.jpg",
+    "category": "truck",
+    "featured": 0
+  },
+  {
+    "name": "INDEPENDENT PRO MASON SILVA BLACK SILVER STANDARD TRUCKS 144mm",
+    "price": 2200,
+    "image": "images/INDEPENDENT_PRO_MASON_SILVA_BLACK_SILVER_STANDARD_TRUCKS.jpg",
+    "category": "truck",
+    "featured": 1
+  },
+  {
+    "name": "KRUX STRANGER THINGS CODE TRUCKS 139mm",
+    "price": 2080,
+    "image": "images/KRUX_STRANGER_THINGS_CODE_TRUCKS.jpg",
+    "category": "truck",
+    "featured": 1
+  },
+  {
+    "name": "KRUX K5 Polished Sliver Standard Trucks 139mm",
+    "price": 1600,
+    "image": "images/KRUX_K5_Polished_Sliver_Standard_Trucks.jpg",
+    "category": "truck",
+    "featured": 0
+  },
+  {
+    "name": "TOY MACHINE 100A / 52MM SMALL MONSTER",
+    "price": 1500,
+    "image": "images/TOY_MACHINE_SMALL_MONSTER.jpg",
+    "category": "wheel",
+    "featured": 1
+  },
+  {
+    "name": "TOY MACHINE 100A / 53MM NO POSERS",
+    "price": 1500,
+    "image": "images/TOY_MACHINE_NO_POSERS.jpg",
+    "category": "wheel",
+    "featured": 0
+  },
+  {
+    "name": "OJ WHEELS 54MM DOUBLE DURO WHITE MINI COMBO 101A/95A",
+    "price": 2200,
+    "image": "images/OJ_WHEELS_54MM_DOUBLE_DURO_WHITE.jpg",
+    "category": "wheel",
+    "featured": 0
+  },
+  {
+    "name": "OJ WHEELS 54MM NICK BOSERIO SAD SECURITY MINI COMBOS WHITE 99A",
+    "price": 1600,
+    "image": "images/OJ_WHEELS_54MM_NICK_BOSERIO_SAD_SECURITY_MINI_COMBOS_WHITE_99A.jpg",
+    "category": "wheel",
+    "featured": 1
+  },
+  {
+    "name": "MOB RIP TAPE 9IN X 33IN SHEET",
+    "price": 200,
+    "image": "images/MOB_RIP_TAPE_9IN_X_33IN_SHEET.jpg",
+    "category": "griptape",
+    "featured": 1
+  },
+  {
+    "name": "MOB STRANGER THING GRIP TAPE",
+    "price": 500,
+    "image": "images/MOB_STRANGER_THING_GRIP_TAPE.jpg",
+    "category": "griptape",
+    "featured": 0
+  },
+  {
+    "name": "MOB THRASHER GONZ MAG GRIP TAPE 9IN X 33IN",
+    "price": 500,
+    "image": "images/MOB_THRASHER_GONZ_MAG_GRIP_TAPE_9IN_X_33IN.jpg",
+    "category": "griptape",
+    "featured": 0
+  },
+  {
+    "name": "PIG CHOICE BEARINGS",
+    "price": 900,
+    "image": "images/PIG_CHOICE_BEARINGS.jpg",
+    "category": "bearing",
+    "featured": 0
+  },
+  {
+    "name": "BRONSON FRANKY VILLANI PRO BEARING G3",
+    "price": 1300,
+    "image": "images/BRONSON_FRANKY_VILLANI_PRO_BEARING_G3.jpg",
+    "category": "bearing",
+    "featured": 1
+  },
+  {
+    "name": "BRONSON BEARING RAW",
+    "price": 1500,
+    "image": "images/BRONSON.jpg",
+    "category": "bearing",
+    "featured": 0
+  },
+  {
+    "name": "INDEPENDENT GENUINE PARTS PHILLIPS HARDWARE 7/8",
+    "price": 100,
+    "image": "images/INDEPENDENT_GENUINE_PARTS_PHILLIPS_HARDWARE.jpg",
+    "category": "hardware",
+    "featured": 1
+  },
+  {
+    "name": "INDEPENDENT GENUINE PARTS PHILLIPS HARDWARE 1 IN",
+    "price": 150,
+    "image": "images/INDEPENDENT_GENUINE_PARTS_PHILLIPS_HARDWARE_1_IN.jpg",
+    "category": "hardware",
+    "featured": 1
+  },
+  {
+    "name": "KRUX KROME PHILLIPS HARDWARE 1 IN RAINBOW",
+    "price": 650,
+    "image": "images/KRUX_KROME_PHILLIPS_HARDWARE_1_IN_RAINBOW.jpg",
+    "category": "hardware",
+    "featured": 0
+  },
+  {
+    "name": "INDEPENDENT BEARING SAVER TOOL",
+    "price": 500,
+    "image": "images/INDEPENDENT_BEARING_SAVER_TOOL.jpg",
+    "category": "other",
+    "featured": 0
+  },
+  {
+    "name": "PIG TRI SOCKET TOOL",
+    "price": 780,
+    "image": "images/PIG_TRI_SOCKET_TOOL.jpg",
+    "category": "other",
+    "featured": 1
+  },
+  {
+    "name": "INDENTPENDENT KURB KILLER CURB WAX",
+    "price": 200,
+    "image": "images/INDENTPENDENT_KURB_KILLER_CURB_WAX.jpg",
+    "category": "other",
+    "featured": 1
+  },
+  {
+    "name": "SANTA CRUZ SCREAMING HAND CURB WAX",
+    "price": 400,
+    "image": "images/SANTA_CRUZ_SCREAMING_HAND_CURB_WAX.jpg",
+    "category": "other",
+    "featured": 0
+  },
+  {
+    "name": "BUTTER GOODS STRIPE TEE",
+    "price": 1600,
+    "image": "images/BUTTER_GOODS_STRIPE_TEE.jpg",
+    "category": "clothes",
+    "featured": 0
+  },
+  {
+    "name": "BUTTER GOODS BIG APPLE TEE",
+    "price": 1400,
+    "image": "images/BUTTER_GOODS_BIG_APPLE_TEE.jpg",
+    "category": "clothes",
+    "featured": 0
+  },
+  {
+    "name": "BUTTER GOODS BIG APPLE PULLOVER HOOD",
+    "price": 3200,
+    "image": "images/BUTTER_GOODS_BIG_APPLE_PULLOVER_HOOD.jpg",
+    "category": "clothes",
+    "featured": 0
+  },
+  {
+    "name": "BUTTER GOODS EQUIPMENT SHORTS",
+    "price": 1100,
+    "image": "images/BUTTER_GOODS_ EQUIPMENT_SHORTS.jpg",
+    "category": "clothes",
+    "featured": 0
+  },
+  {
+    "name": "DICKIES 85283 FLEX",
+    "price": 1600,
+    "image": "images/DICKIES_85283_FLEX.jpg",
+    "category": "clothes",
+    "featured": 0
+  },
+  {
+    "name": "HUF SET BOX TEE",
+    "price": 1600,
+    "image": "images/HUF_SET_BOX_TEE.jpg",
+    "category": "clothes",
+    "featured": 0
+  },
+  {
+    "name": "ALPHA HFA",
+    "price": 1100,
+    "image": "images/ALPHA_HFA.jpg",
+    "category": "clothes",
+    "featured": 0
+  },
+  {
+    "name": "CARIUMA CATIBA PRO SKATE",
+    "price": 2980,
+    "image": "images/CARIUMA_CATIBA_PRO_SKATE.jpg",
+    "category": "clothes",
+    "featured": 1
+  },
+  {
+    "name": "BRONSON BEARINGS G2",
+    "price": 650,
+    "image": "images/BRONSON_BEARINGS_G2.jpg",
+    "category": "bearing",
+    "featured": 1
+  },
+  {
+    "name": "INDEPENDENT GENUINE PARTS PHILLIPS HARDWARE 7/8\"",
+    "price": 100,
+    "image": "images/INDEPENDENT_GENUINE_PARTS_PHILLIPS_HARDWARE.jpg",
+    "category": "hardware",
+    "featured": 0
+  }
+]

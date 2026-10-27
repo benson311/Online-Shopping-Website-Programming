@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊 - 阿奇滑板店</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+
+        .register-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .register-container input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .register-container button:hover {
+            background-color: #555;
+        }
+
+        .register-container a {
+            display: block;
+            margin-top: 15px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .register-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>會員註冊</h2>
+        <input type="text" placeholder="帳號" id="new-username">
+        <input type="password" placeholder="密碼" id="new-password">
+        <input type="password" placeholder="確認密碼" id="confirm-password">
+        <button onclick="register()">註冊</button>
+        <a href="login.html">返回登入</a>
+    </div>
+
+    <script>
+        function register() {
+            var username = document.getElementById('new-username').value;
+            var password = document.getElementById('new-password').value;
+            var confirmPassword = document.getElementById('confirm-password').value;
+
+            if (username === '' || password === '' || confirmPassword === '') {
+                alert("所有欄位皆需填寫");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("密碼不相符");
+                return;
+            }
+
+            fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(`註冊失敗: ${data.error}`);
+                } else {
+                    // 註冊成功後自動登入，方便直接開始購物
+                    localStorage.setItem('currentUser', JSON.stringify({
+                        userId: data.userId,
+                        username: data.username
+                    }));
+                    alert('註冊成功，已自動為您登入！');
+                    window.location.href = 'index.html';
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('註冊失敗');
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

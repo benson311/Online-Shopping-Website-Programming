@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們 - 阿奇滑板店</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-right a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .about-section {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            flex: 1 1 calc(33% - 20px);
+            margin: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html">
+                <img src="images/logo.png" alt="阿奇滑板店標誌" class="logo">
+            </a>
+            <h1>阿奇滑板店</h1>
+        </div>
+        <nav class="header-right">
+            <a href="index.html">首頁</a>
+            <a href="product.html">所有產品</a>
+            <a href="cart.html">購物車</a>
+            <a href="login.html">註冊/登入</a>
+        </nav>
+    </header>
+    <main>
+        <div class="about-section">
+            <h2>關於我們</h2>
+            <p>阿奇滑板店創立於2024年，致力於提供最好的滑板產品和服務。我們的使命是推廣滑板文化，並為滑板愛好者提供一個交流和成長的平台。</p>
+            <p>我們提供各種滑板、配件和服裝，並且定期舉辦滑板活動和比賽。我們的團隊成員都是經驗豐富的滑板手，熱衷於滑板運動和社區建設。</p>
+        </div>
+        <div class="team">
+            <div class="team-member">
+                <img src="images/logo.png" alt="團隊成員1">
+                <h3>阿奇</h3>
+            </div>
+            <div class="team-member">
+                <img src="images/spitfire.jpg" alt="團隊成員2">
+                <h3>阿瓜</h3>
+            </div>
+            <div class="team-member">
+                <img src="images/girl.jpg" alt="團隊成員3">
+                <h3>阿尚</h3>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contact-info">
+            <p>地址: 桃園市蘆竹區蘆竹路15號</p>
+            <p>聯絡電話: 03-3245688</p>
+            <p>Email: <a href="mailto:qooskateboard@gmail.com">qooskateboard@gmail.com</a></p>
+            &copy; 2023 阿奇滑板店. 版權所有.
+        </div>
+    </footer>
+</body>
+</html>

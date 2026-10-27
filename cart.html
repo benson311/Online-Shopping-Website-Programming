@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車 - 阿奇滑板店</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header-right {
+            display: flex;
+            gap: 15px;
+        }
+        .header-right a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        #user-status {
+            text-align: right;
+            color: #555;
+            margin: 10px 0;
+        }
+        #user-status button {
+            margin-left: 10px;
+            padding: 5px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #user-status button:hover {
+            background-color: #555;
+        }
+        .cart-container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .cart-product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .cart-product:last-child {
+            border-bottom: none;
+        }
+        .item-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-price {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 4px;
+        }
+        .item-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .qty-btn {
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            font-size: 1.1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .qty-btn:hover:not(:disabled) {
+            background-color: #555;
+        }
+        .qty-btn:disabled {
+            background-color: #aaa;
+            cursor: not-allowed;
+        }
+        .qty {
+            min-width: 24px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .item-subtotal {
+            min-width: 100px;
+            text-align: right;
+            font-weight: bold;
+        }
+        .remove-btn {
+            padding: 6px 14px;
+            background-color: #c0392b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .remove-btn:hover {
+            background-color: #e74c3c;
+        }
+        .cart-total {
+            text-align: right;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #checkout-btn {
+            padding: 12px 30px;
+            font-size: 1.1em;
+            background-color: #27ae60;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            margin: 20px 0 0 auto;
+        }
+        #checkout-btn:hover:not(:disabled) {
+            background-color: #2ecc71;
+        }
+        #checkout-btn:disabled {
+            background-color: #aaa;
+            cursor: not-allowed;
+        }
+        #cart-empty, #login-prompt {
+            display: none;
+            text-align: center;
+            padding: 40px 0;
+            color: #777;
+        }
+        #cart-empty a, #login-prompt a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .orders-section {
+            margin-top: 30px;
+        }
+        .order-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+        }
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .order-total {
+            color: #27ae60;
+        }
+        .order-items {
+            text-align: left;
+            margin: 8px 0 0 20px;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+        .contact-info {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html">
+                <img src="images/logo.png" alt="阿奇滑板店標誌" class="logo">
+            </a>
+            <h1>您的購物車</h1>
+        </div>
+        <nav class="header-right">
+            <a href="index.html">首頁</a>
+            <a href="product.html">所有商品</a>
+            <a href="login.html">註冊/登入</a>
+        </nav>
+    </header>
+    <main>
+        <div id="user-status"></div>
+
+        <!-- 未登入時的提示 -->
+        <div id="login-prompt" class="cart-container">
+            <h2>您尚未登入</h2>
+            <p>登入會員後即可查看並管理您的購物車。</p>
+            <p><a href="login.html">按此登入</a> 或 <a href="register.html">註冊新帳號</a></p>
+        </div>
+
+        <!-- 購物車主要區塊 -->
+        <div id="cart-section" class="cart-container">
+            <h2>購物車中的商品 <span id="cart-count-info" style="font-size:0.7em;color:#777;"></span></h2>
+            <div class="cart-list" id="cart-items">
+                <!-- 購物車商品將由 js/cart.js 渲染 -->
+            </div>
+            <div id="cart-empty">
+                <p>購物車內沒有商品</p>
+                <p><a href="product.html">前往挑選商品</a></p>
+            </div>
+            <p class="cart-total">總計: $<span id="total-price">0.00</span></p>
+            <button id="checkout-btn" onclick="checkout()" disabled>結帳</button>
+        </div>
+
+        <!-- 歷史訂單區塊 -->
+        <div id="orders-section" class="orders-section" style="display:none;">
+            <h2>歷史訂單</h2>
+            <div id="orders-list">
+                <!-- 訂單記錄將由 js/cart.js 渲染 -->
+            </div>
+        </div>
+    </main>
+    <script src="js/shared.js"></script>
+    <script src="js/cart.js"></script>
+    <footer>
+        <div class="contact-info">
+            <p>地址: 桃園市蘆竹區蘆竹路15號</p>
+            <p>聯絡電話: 03-3245688</p>
+            <p>Email: <a href="mailto:qooskateboard@gmail.com">qooskateboard@gmail.com</a></p>
+            &copy; 2023 阿奇滑板店. 版權所有.
+        </div>
+    </footer>
+</body>
+</html>

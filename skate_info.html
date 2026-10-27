@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑板小知識</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 18px; /* 调整 body 字体大小 */
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h2 {
+            color: #333;
+            font-size: 2em; /* 调整 h2 字体大小 */
+        }
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+            font-size: 1.2em; /* 调整 p 字体大小 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+        <h1>滑板小知識</h1> <a></a>
+    </header>
+    <main id="content">
+        <!-- 根據URL中的參數顯示不同內容 -->
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const topic = urlParams.get('topic');
+            const content = document.getElementById('content');
+            
+            if (topic) {
+                if (topic === 'yuto') {
+                    content.innerHTML = `
+                        <h2>Yuto</h2>
+                        <img src="images/yuto.jpg" alt="Yuto">
+                        <p>Yuto Horigome<br>堀米雄斗（日語：堀米 雄斗／ほりごめ ゆうと Horigome Yūto，1999年1月7日—)<br>日本男子滑板運動員。2021年7月25日，他代表日本參加2020年夏季奧林匹克運動會滑板比賽，<br>在男子街式賽中奪得金牌，亦是奧林匹克運動會史上第一枚滑板金牌。</p>`;
+                } else if (topic === 'shane') {
+                    content.innerHTML = `
+                        <h2>Shane</h2>
+                        <img src="images/shane.jpg" alt="Shane">
+                        <p>Shane O'Neill<br>肖恩·奧尼爾生於1990年1月3日，是一位來自維多利亞州墨爾本的澳洲職業滑板運動員<br>Shane是SLS(9 Club)的成員，這意味著他在街頭聯盟比賽中獲得了評審平均得分為9或更高的技巧。Shane的技巧是Switchstance Switch 360 雙踢腳翻。<br>Shane 是少數在X Games、Street League Skateboarding、Tampa Pro（滑板比賽）和世界滑板錦標賽這四項主要滑板比賽中都獲得金牌的滑板運動員之一。<br>2021年，歐尼爾在街頭滑板比賽中獲得了2020年東京夏季奧運的參賽資格。他參加了2020年東京奧運男子街頭計畫。他在預賽中排名第十六，因此沒有參加決賽。</p>`;
+                } else if (topic === 'oliveira') {
+                    content.innerHTML = `
+                        <h2>Oliveira</h2>
+                        <img src="images/oliveira.jpg" alt="Oliveira">
+                        <p>Luan Oliveira<br>盧安·奧利維拉是一位巴西街頭滑板運動員。<br>他參加了2013年和2015年世界滑板錦標賽，並在街頭賽事中獲得了兩枚銅牌。<br>奧利維拉也參加了夏季極限運動會。</p>`;
+                } else if (topic === 'filipe') {
+                    content.innerHTML = `
+                        <h2>Filipe</h2>
+                        <img src="images/filipe.jpg" alt="Filipe">
+                        <p>Filipe Mota<br>巴西作為滑板強國之一，似乎從來不缺乏出色的滑手。濃厚的滑板氛圍孕育出不少強勁的後浪。<br>Filipe Mota 則是當中值得注意的一位。剛踏入13歲青少年階段的他，卻已擁有令人出乎意料的滑板技術。<br>除了收穫 Nike SB， Monster以及 Primitive等重磅品牌的橄欖枝外，近幾年來他亦一直在各大滑板賽事中嶄露頭角，樹立起自己的名號。</p>`;
+                } else if (topic === 'kyonosuke') {
+                    content.innerHTML = `
+                        <h2>Kyonosuke</h2>
+                        <img src="images/kyonosuke.jpg" alt="Kyonosuke">
+                        <p>Kyonosuke Yamashita<br>18 歲的京之助在日本首都出生長大，他第一次引起Lakai 男孩的注意是在2018 年的一次演示中。<br>這位年輕日本新星已經在 Instagram 上積累了超過 30 萬粉絲，毫無疑問是當今舞台上最令人興奮的新人之一。</p>`;
+                } else if (topic === 'milou') {
+                    content.innerHTML = `
+                        <h2>Milou</h2>
+                        <img src="images/milou.jpg" alt="Milou">
+                        <p>Vincent Milou<br>文森·米盧（ Vincent Milou，1996 年 11 月 11 日出生）是一位來自塔爾諾斯的法國 職業滑板運動員。<br>2018 年，米盧在el Toro的扶手上做了一次鈍滑，然後在 2019 年的滑板比賽中完成了該場地的滑行。<br>2018 年，Milou在蒙彼利埃的 FISE WORLD 上排名第一，高於 Daisuke Ikeda 和Aurélien Giraud。<br>2019 年 7 月，Milou 在洛杉磯街頭聯盟滑板錦標賽中獲得第三名，落後於Yuto Horigome和Maurio McCoy。</p>`;
+                } else {
+                    content.innerHTML = '<h2>未找到主題</h2><p>請選擇正確的滑板主題。</p>';
+                }
+            } else {
+                content.innerHTML = '<h2>未選擇主題</h2><p>請從主頁選擇一個滑板主題。</p>';
+            }
+        });
+    </script>
+</body>
+</html>
+
